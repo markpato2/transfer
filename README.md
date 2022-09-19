@@ -1,4 +1,4 @@
-# APIs REST com PHP 7 e Slim Framework
+# APIs REST
 
 Copie o arquivo `env.example.php` para `env.php` e preencha com as informações necessárias.
 
