@@ -8,7 +8,7 @@ Use o código da pasta sql/ para criar o seu banco de dados trabalhando com o SG
 
 <h1>Chamadas API</h1>
 
-Criar Usuario (POST). <br>
+<strong>Criar Usuario (POST).</strong> <br>
 url: http://localhost/v1/user<br>
 POST Exemplo:<br>
 {<br>
@@ -20,16 +20,16 @@ POST Exemplo:<br>
 	"saldo":"200.20",<br>
 	"tipo_usuario":1<br>
 }<br>
-
-Obter Usuario (GET). 
-url: http://localhost/v1/user/1
-
-
-Fazer Transferencia (POST). 
-url: http://localhost/v1/transfer
-POST Exemplo:
-{
-	"pagador":2,
-	"beneficiario":1,
-	"valor": 50.23
-}
+<br>
+Obter Usuario (GET). <br>
+url: http://localhost/v1/user/1<br>
+<br>
+<br>
+Fazer Transferencia (POST). <br>
+url: http://localhost/v1/transfer<br>
+POST Exemplo:<br>
+{<br>
+	"pagador":2,<br>
+	"beneficiario":1,<br>
+	"valor": 50.23<br>
+}<br>
