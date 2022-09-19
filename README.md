@@ -9,17 +9,17 @@ Use o código da pasta sql/ para criar o seu banco de dados trabalhando com o SG
 <h1>Chamadas API</h1>
 
 Criar Usuario (POST). <br>
-url: http://localhost/v1/user
-POST Exemplo:
-{
-	"nome": "Marcelo",
-	"sobrenome": "Perez",
-	"cpf":"474504",
-	"email":"mogteetg@gmail.co",
-	"senha":"123",
-	"saldo":"200.20",
-	"tipo_usuario":1
-}
+url: http://localhost/v1/user<br>
+POST Exemplo:<br>
+{<br>
+	"nome": "Marcelo",<br>
+	"sobrenome": "Perez",<br>
+	"cpf":"474504",<br>
+	"email":"mogteetg@gmail.co",<br>
+	"senha":"123",<br>
+	"saldo":"200.20",<br>
+	"tipo_usuario":1<br>
+}<br>
 
 Obter Usuario (GET). 
 url: http://localhost/v1/user/1
