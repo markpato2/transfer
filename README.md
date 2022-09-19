@@ -33,3 +33,6 @@ POST Exemplo:<br>
 	"beneficiario":1,<br>
 	"valor": 50.23<br>
 }<br>
+
+Autenticação Basic:
+Usuário e Senha colocado no arquivo .env nas variáveis BASIC_USER e BASIC_PASSWORD
