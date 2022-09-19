@@ -21,11 +21,11 @@ POST Exemplo:<br>
 	"tipo_usuario":1<br>
 }<br>
 <br>
-Obter Usuario (GET). <br>
+<strong>Obter Usuario (GET).</strong> <br>
 url: http://localhost/v1/user/1<br>
 <br>
 <br>
-Fazer Transferencia (POST). <br>
+<strong>Fazer Transferencia (POST).</strong> <br>
 url: http://localhost/v1/transfer<br>
 POST Exemplo:<br>
 {<br>
