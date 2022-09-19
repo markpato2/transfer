@@ -8,7 +8,7 @@ Use o código da pasta sql/ para criar o seu banco de dados trabalhando com o SG
 
 <h1>Chamadas API</h1>
 
-Criar Usuario (POST).
+Criar Usuario (POST). <br>
 url: http://localhost/v1/user
 POST Exemplo:
 {
