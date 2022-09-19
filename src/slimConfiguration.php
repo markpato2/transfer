@@ -15,10 +15,6 @@ function slimConfiguration(): \Slim\Container
             'displayErrorDetails' => getenv('DISPLAY_ERRORS_DETAILS'),
         ],
     ];
-
     $container = new \Slim\Container($configuration);
-
-   // $container->offsetSet(LojasDAO::class, new LojasDAO());
-
     return $container;
 }

@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use Bissolli\ValidadorCpfCnpj\CPF;
+use Bissolli\ValidadorCpfCnpj\Documento;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use App\DAO\UsuariosDAO;
@@ -21,6 +23,18 @@ class UsuarioController extends ControladorBaseController
     {
         //Obter dados da requisicao
         $data = $request->getParsedBody();
+
+        $documento = new Documento($data['cpf']);
+
+       if(!$documento->isValid()){
+           $response = $response->withJson([
+               'message' => 'Número de CPF inválido'
+           ]);
+           return $response;
+       }
+
+
+
         $usuarioDAO = new UsuariosDAO();
         //Verificar se e-mail existe
         $usuario = $usuarioDAO->getUserByEmail($data['email']);
@@ -77,9 +91,34 @@ class UsuarioController extends ControladorBaseController
         return $response;
     }
 
-    protected function get(Request $request, Response $response, array $args): Response
+    public function get(Request $request, Response $response, array $args): Response
     {
-       return $response;
+
+        //Obter dados da requisicao
+        $data = $request->getParsedBody();
+        $id = (int) $args['id'];
+
+        $usuarioDAO = new UsuariosDAO();
+        //Verificar se e-mail existe
+        $usuario = $usuarioDAO->getUserById($id);
+        //Verifica se email existe
+        if (!is_null($usuario)) {
+            $response = $response->withJson([
+                'id' => $usuario->getId(),
+                'nome' => $usuario->getNome(),
+                'sobrenome' => $usuario->getSobrenome(),
+                'cpf' => $usuario->getCpf(),
+                'saldo' => $usuario->getSaldo()
+            ]);
+            return $response;
+        }
+
+        $response = $response->withJson([
+            'message' => 'Usuario não encontrado'
+        ]);
+        return $response;
+
+
     }
 
     protected function update(Request $request, Response $response, array $args): Response
@@ -91,4 +130,6 @@ class UsuarioController extends ControladorBaseController
     {
         return $response;
     }
+
+
 }

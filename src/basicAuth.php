@@ -10,9 +10,11 @@ use Tuupola\Middleware\HttpBasicAuthentication;
  */
 function basicAuth(): HttpBasicAuthentication
 {
+    $user = getenv('BASIC_USER');
+    $password = getenv('BASIC_PASSWORD');
     return new HttpBasicAuthentication([
         "users" => [
-            "root" => "teste123"
+            $user => $password
         ]
     ]);
 }

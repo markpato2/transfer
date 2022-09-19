@@ -5,7 +5,8 @@
     "tuupola/slim-basic-auth": "^3.2",
     "tuupola/slim-jwt-auth": "^3.2",
     "squizlabs/php_codesniffer": "^3.5",
-    "slim/psr7": "^1.5"
+    "slim/psr7": "^1.5",
+    "bissolli/validador-cpf-cnpj": "^1.2"
   },
   "autoload": {
     "psr-4": {
