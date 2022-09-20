@@ -4,6 +4,8 @@ Copie o arquivo `env.example.php` para `env.php` e preencha com as informações
 
 Rode no terminal `docker-compose build` e ` docker-compose up -d  ` para subir os containers.
 
+Rode no terminal  'docker-compose exec php composer install' para instalar dependencias com composer
+
 Use o código da pasta sql/ para criar o seu banco de dados trabalhando com o SGBD MySQL.
 
 <h1>Chamadas API</h1>
